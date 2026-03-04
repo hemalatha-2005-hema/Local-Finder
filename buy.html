@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buy Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #219150;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Product Details</h2>
+
+    <p><strong>Item:</strong> <span id="itemName"></span></p>
+    <p><strong>Price:</strong> ₹<span id="itemPrice"></span></p>
+
+    <button onclick="alert('Order Placed Successfully!')">Confirm Purchase</button>
+</div>
+
+<script>
+    // Get data from URL
+    const params = new URLSearchParams(window.location.search);
+
+    const item = params.get("item");
+    const price = params.get("price");
+
+    document.getElementById("itemName").innerText = item;
+    document.getElementById("itemPrice").innerText = price;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Need Help
+        </title>
+        <style>
+             body {
+            font-family: Arial, sans-serif;
+            background-color: #dadbc4;
+            margin: 0;
+            padding: 0;
+        }
+         .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgb(173, 160, 160);
+        }
+         h2 {
+            text-align: center;
+            color: #333;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #b33465;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .back-btn {
+            display: inline-block;
+            padding:  10px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 200px;
+            
+        }
+
+
+        button:hover {
+            background-color: #45a049;
+        }
+        </style>
+    </head>
+
+<body>
+<div class="container">
+        <h2>Any Help</h2>
+        <form onsubmit="sendMessage(event)">
+    <label>Message</label>
+    <textarea id="message" rows="4" placeholder="Write your message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+<script>
+function sendMessage(event) {
+    event.preventDefault();
+
+    const message = document.getElementById("message").value;
+
+    fetch("http://localhost:5000/send-message", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ message: message })
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert("Message Sent Successfully!");
+        document.getElementById("message").value = "";
+        
+    })
+    .catch(error => {
+        alert("Error sending message");
+    });
+}
+</script>
+        <br>
+        <a href="homepage.html" class="back-btn">⬅ Back to homepage</a>
+
+    </div>
+    </body>
+    </html>

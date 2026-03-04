@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Items List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #eef2f3;
+        }
+
+        header {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .container {
+            width: 85%;
+            margin: 20px auto;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .buy-btn {
+            padding: 5px 10px;
+            background-color: #4bc3cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .buy-btn:hover {
+            background-color: #21618c;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #34495e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Product Items List</h1>
+</header>
+
+<div class="container">
+
+    <!-- Back Button -->
+    <a href="products.html" class="back-btn">⬅ Back to Products</a>
+
+    <!-- Groceries Table -->
+    <h2>Groceries</h2>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Rice (1kg)</td>
+            <td>₹60</td>
+            <td><a href="buy.html?item=Rice (1kg)&price=60" class="buy-btn">Buy</a></td>
+        </tr>
+        <tr>
+            <td>Milk (1L)</td>
+            <td>₹50</td>
+            <td><a href="buy.html?item=Milk (1L)&price=50" class="buy-btn">Buy</a></td>
+        </tr>
+    </table>
+
+    <!-- Home Appliances Table -->
+    <h2>Home Appliances</h2>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Ceiling Fan</td>
+            <td>₹1500</td>
+            <td><a href="buy.html?item=Ceiling Fan&price=1500" class="buy-btn">Buy</a></td>
+        </tr>
+        <tr>
+            <td>Mixer Grinder</td>
+            <td>₹2000</td>
+            <td><a href="buy.html?item=Mixer Grinder&price=2000" class="buy-btn">Buy</a></td>
+        </tr>
+    </table>
+
+    <!-- Stationery Table -->
+    <h2>Stationery</h2>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Notebook</td>
+            <td>₹40</td>
+            <td><a href="buy.html?item=Notebook&price=40" class="buy-btn">Buy</a></td>
+        </tr>
+        <tr>
+            <td>Pen</td>
+            <td>₹10</td>
+            <td><a href="buy.html?item=Pen&price=10" class="buy-btn">Buy</a></td>
+        </tr>
+    </table>
+
+</div>
+
+<footer>
+    © 2026 Local Help Finder | All Rights Reserved
+</footer>
+
+</body>
+</html>

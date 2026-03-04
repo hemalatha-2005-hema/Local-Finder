@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Help Finder - Home</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+        background-color: #c1c4aa;
+        background-image: url("images/bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+    }
+
+    header {
+        background-color: transparent;
+        color: white;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    nav {
+        background: #333;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 16px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+        color:crimson;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        color: white;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .hero button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: white;
+        color: #4facfe;
+    }
+
+    .hero button:hover {
+        background-color: #e6e6e6;
+    }
+
+    .services {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .services h2 {
+        margin-bottom: 30px;
+    }
+
+    .service-box {
+        display: inline-block;
+        width: 250px;
+        margin: 15px;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .service-box h3 {
+        margin-bottom: 10px;
+    }
+
+    footer {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+    }
+</style>
+
+</head>
+<body><header>
+    <h1>Local Help Finder</h1>
+    <img src="images/local.png" height="200px" width="150px" alt="">
+</header><nav>
+    <a href="#">Home</a>
+    <a href="servicespage.html">Services</a>
+    <a href="aboutpage.html">About</a>
+    <a href="contactpage.html">Contact</a>
+</nav><section class="hero">
+    <h1>Find Trusted Local Help Near You</h1>
+    <p>Connecting you with electricians, plumbers, and more in your area.</p>
+    <button onclick="window.location.href='help.html'">Find Help</button>
+</section>
+<section class="services">
+    <h2>Trending Services</h2><div class="service-box">
+        <img src="images/home1.jpeg" height="100px" width="120px" alt="">
+    <h3>Home Services</h3>
+    <p>home cleaning, electricians,plumbers.</p>
+    <a href="cleaning.html">Next</a>
+</div>
+
+<div class="service-box">
+    <img src="images/medical.webp" height="115px" width="120px" alt="">
+    <h3>Medical Services</h3>
+    <p>drops,sparys,tablets.</p>
+    <a href="medicalpage.html">Next</a>
+</div>
+
+<div class="service-box">
+    <img src="images/grow.png" height="100px" width="120px" alt="">
+    <h3>Products</h3>
+    <p>groceries,home appliances,stationery</p>
+    <a href="products.html" class="btn">Next</a>
+</div>
+
+<script>
+window.onload = function(){
+
+    var loggedIn = localStorage.getItem("loggedInUser");
+
+    if(loggedIn == null){
+        alert("Please login first");
+        window.location.href = "loginpage.html";
+    }
+}
+</script>
+ 
+</section><footer>
+    <p>&copy; 2026 Local Help Finder | All Rights Reserved</p>
+</footer></body>
+</html>

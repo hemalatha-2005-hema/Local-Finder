@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Help Finder - Get Started</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;  /* ✅ fixed */
+            height: 100vh;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            border-radius: 15px;
+            width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 25px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #ffffff;
+            color: #5b86e5;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to Help Finder</h1>
+    <p>Find local services quickly and easily. Get help anytime, anywhere.</p>
+    
+    <button onclick="goToLogin()">Get Started</button>
+</div>
+
+<script>
+function goToLogin() {
+    window.location.href = "loginpage.html";
+}
+</script>
+
+</body>
+</html>
